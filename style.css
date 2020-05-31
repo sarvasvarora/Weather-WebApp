@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decorate {
+    padding: 2%;
+    margin: 2% auto;
+    display: flex;
+    justify-content: ceneter;
+    align-items: center;
+}
+
+.container {
+    width: 50%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas:
+        "loc loc loc loc loc img img img img"
+        "temp temp temp temp temp temp temp temp temp"
+        "des des des des des des des des des";
+}
+
+#location {
+    grid-area: loc;
+}
+
+#weather-img {
+    grid-area: img;
+    height: 150px;
+    width: 150px;
+}
+
+#temperature {
+    grid-area: temp;
+    -webkit-transition: all ease-in 500ms;
+    transition: all ease-in 500ms;
+}
+
+#weather-description {
+    grid-area: des;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.fade {
+    opacity: 0.7;
+    cursor: pointer;
+    margin-left: 20px;
+    -webkit-transition: all ease-in 500ms;
+    transition: all ease-in 500ms;
+}
+
+/*Temperature based classes for backgroound*/
+.snow {
+    background: linear-gradient(white, black) no-repeat;
+}
+
+.normal {
+    background: linear-gradient(lightblue, darkblue) no-repeat;
+}
+
+.warm {
+    background: linear-gradient(yellow, darkorange) no-repeat;
+}
+
+.hot {
+    background: linear-gradient(orange, darkred) no-repeat;
+}
