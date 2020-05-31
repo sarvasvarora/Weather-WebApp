@@ -47,8 +47,8 @@ navigator.geolocation.getCurrentPosition((pos) => {
     longitude = pos.coords["longitude"];
 
     const apiKey = `9576b4d42352cf30782491e7f619ae14`;
-    const proxy = `https://cors-anywhere.herokuapp.com/`;
-    let api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+    //const proxy = `https://cors-anywhere.herokuapp.com/`;
+    let api = `api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
 
     console.log(api);
 
