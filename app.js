@@ -59,7 +59,7 @@ navigator.geolocation.getCurrentPosition((pos) => {
             location_div.textContent = `${resultJSON.name}, ${resultJSON.sys.country}`;
 
             let imageId = resultJSON.weather[0].icon;
-            weatherImage_div.innerHTML = `<img src="http://openweathermap.org/img/wn/${imageId}@2x.png" alt="Current weather icon." style="height: 100%; width: 100%;">`;
+            weatherImage_div.innerHTML = `<img src="https://openweathermap.org/img/wn/${imageId}@2x.png" alt="Current weather icon." style="height: 100%; width: 100%;">`;
 
 
             let currentTemp = twoDecimalPlaces(resultJSON.main.temp - 273.15);
